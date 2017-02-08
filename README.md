@@ -1,5 +1,5 @@
 ![CF](https://i.imgur.com/7v5ASc8.png)  Lab 02: jQuery and the DOM
-=======
+
 [Code of Conduct](https://github.com/codefellows/code-of-conduct)
 
 ## Submission Instructions
@@ -35,7 +35,7 @@ When you are finished with lab, follow these steps to submit your work. Create o
 
 ## Feature Tasks  
 <!-- a list or description of the feature tasks you want the students to implement -->
-1. Add any necessary script tags to your HTML. 
+1. Add any necessary script tags to your HTML.
 2. Complete that article constructor by assigning all of the properties of an object argument to properties of `this`.
 3. Complete the `toHtml()` method, which will ultimately be used to render each article instance to the DOM.
 
