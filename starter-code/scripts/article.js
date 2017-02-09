@@ -16,10 +16,10 @@ Article.prototype.toHtml = function() {
   as it now has real data attached to it! We need to account
   for that before this current article gets rendered to our
   DOM. */
-  $newArticle.removeClass("template");
+  $newArticle.removeClass('template');
   if (!this.publishedOn) $newArticle.addClass('draft');
   $newArticle.data('category', this.category);
-
+  // console.log(this.category);
   /* TODO: Now use jQuery to fill in the rest of the current
   template clone with properties from this particular Article instance.
   We need to fill in:
@@ -28,7 +28,14 @@ Article.prototype.toHtml = function() {
     3. article title,
     4. article body, and
     5. publication date. */
-
+  // author name
+  $newArticle.find('.byline a').html(this.author);
+  // author url
+  $newArticle.find('.byline a').attr('href', this.authorUrl);
+  //title
+  $newArticle.find('h1').html(this.title);
+  //body
+  $newArticle.find('.article-body').html(this.body);
   // Display the date as a relative number of 'days ago'
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
   $newArticle.append('<hr>');
